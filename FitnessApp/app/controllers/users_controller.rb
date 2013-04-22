@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+
+	# GET /users
+	def index
+		# pass ALL users to view
+		@users = User.all()
+	end
 	
 	# GETS /users/new
 	def new
@@ -18,6 +24,18 @@ class UsersController < ApplicationController
 	
 	#GET /users/:id
 	def show
+		@user = User.find(params[:id])
 	end
+
+	# GET /users/:id/edit
+	def edit
+	end
+
+	def update
+	end
+
+	def delete
+	end
+
 
 end
