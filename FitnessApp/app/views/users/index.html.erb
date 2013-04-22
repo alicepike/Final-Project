@@ -1,3 +1,4 @@
 <% @users.each do |user| %>
-	<h1><%= user.username() %></h1>
+	<%= user_name_with_title(user) %>
+	<%= render(:partial => "user_name",:locals => {:user => user}) %>
 <% end %> 
